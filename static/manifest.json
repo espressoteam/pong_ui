@@ -16,5 +16,7 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#4DBA87",
+  "//": "Some browsers will use this to enable push notifications.",
+  "gcm_sender_id": "103953800507"
 }

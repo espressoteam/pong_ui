@@ -4,6 +4,7 @@ import HomeView from '../components/HomeView'
 import DetailView from '../components/DetailView'
 import PostView from '../components/PostView'
 import RouteEditorView from '../components/RouteEditorView'
+import SettingView from '../components/SettingView'
 
 Vue.use(Router)
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
       path: '/editor',
       name: 'editor',
       component: RouteEditorView
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: SettingView
     }
   ]
 })

@@ -110,7 +110,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     // copy firebase-messaging-sw.js
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '../src/firebase-messaging-sw.js'),
+        from: path.resolve(__dirname, '../src/service/firebase-messaging-sw.js'),
         to: path.resolve(__dirname, '../dist/')
       }
     ]),

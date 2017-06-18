@@ -40,6 +40,28 @@
 </template>
 
 <script>
+import Firebase from 'firebase'
+const config = {
+  apiKey: 'AIzaSyApAt_H0iy3l1NyGX38uwQhidX8_bL6zRw',
+  authDomain: 'route64-cecb6.firebaseapp.com',
+  databaseURL: 'https://route64-cecb6.firebaseio.com',
+  projectId: 'route64-cecb6',
+  storageBucket: '',
+  messagingSenderId: '359893308707'
+}
+const app = Firebase.initializeApp(config)
+const messaging = app.messaging()
+messaging.requestPermission()
+.then(function () {
+  console.log('Notification permission granted.')
+})
+.catch(function (err) {
+  console.log('Unable to get permission to notify.', err)
+})
+messaging.onMessage(function (payload) {
+  alert('Message received. ' + payload)
+  console.log('Message received. ', payload)
+})
 export default {
   name: 'app',
   methods: {
@@ -66,4 +88,3 @@ export default {
     margin: 0;
 }
 </style>
-

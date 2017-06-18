@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import VueFire from 'vuefire'
 
 Vue.config.productionTip = false
 
@@ -12,6 +13,8 @@ Vue.use(VueGoogleMaps, {
     key: 'AIzaSyCsFfYE1rLKHx9aTeauPnG7-gSFB3nT6PY'
   }
 })
+
+Vue.use(VueFire)
 
 import RouteCard from './components/RouteCard'
 Vue.component('route-card', RouteCard)

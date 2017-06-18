@@ -1,6 +1,7 @@
 {
   "name": "route64",
   "short_name": "route64",
+  "gcm_sender_id": "103953800507",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",

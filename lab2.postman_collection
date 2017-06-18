@@ -1,0 +1,89 @@
+{
+	"id": "f2da5e82-7f28-6461-73c1-ff234a4a5eac",
+	"name": "lab2",
+	"description": "",
+	"order": [
+		"5b7876d5-0368-4e68-5357-f7ca5efccfb8",
+		"407ba8a2-f9aa-7618-adcc-3fb03d8e3e51"
+	],
+	"folders": [],
+	"timestamp": 1497715647683,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "407ba8a2-f9aa-7618-adcc-3fb03d8e3e51",
+			"headers": "Content-Type: application/json\nAuthorization: key=AAAAkT-iqkI:APA91bFpsljvdL0r-1id-iSR3hoolmuN8QcSJsg68vqnPAsA5xoe7myVCmAIH8uhClv_-_QdHCN9277Vyi10zOvSAFT4Doc8Cb-ulv78ZJQ3-Btz_0OxbBPjiJVnhDfERrVFsd8KX1I1\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "key=AAAAkT-iqkI:APA91bFpsljvdL0r-1id-iSR3hoolmuN8QcSJsg68vqnPAsA5xoe7myVCmAIH8uhClv_-_QdHCN9277Vyi10zOvSAFT4Doc8Cb-ulv78ZJQ3-Btz_0OxbBPjiJVnhDfERrVFsd8KX1I1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://fcm.googleapis.com/fcm/send",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "f2da5e82-7f28-6461-73c1-ff234a4a5eac",
+			"data": [],
+			"dataMode": "raw",
+			"name": "message",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497715970718,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n   \"to\" : \"cub2xYDlSh8:APA91bEWGLXvq7p4tJq-t13TuaUM1Lixb9BWUqaUMaI03e5hHW3MTqajwHeKLJVeTtX662Fuv5LBsj_1oPQivYHOm_ZRlj4oO0CpcIbI8-JIbjuzDzm_bEIwDy33z7DDvtzm2rUPjI6M\",\n   \"data\" : {\n     \"Nick\" : \"Mario\",\n     \"body\" : \"great match!\",\n     \"Room\" : \"PortugalVSDenmark\"\n   }\n}"
+		},
+		{
+			"id": "5b7876d5-0368-4e68-5357-f7ca5efccfb8",
+			"headers": "Content-Type: application/json\nAuthorization: key=AAAAkT-iqkI:APA91bFpsljvdL0r-1id-iSR3hoolmuN8QcSJsg68vqnPAsA5xoe7myVCmAIH8uhClv_-_QdHCN9277Vyi10zOvSAFT4Doc8Cb-ulv78ZJQ3-Btz_0OxbBPjiJVnhDfERrVFsd8KX1I1\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "key=AAAAkT-iqkI:APA91bFpsljvdL0r-1id-iSR3hoolmuN8QcSJsg68vqnPAsA5xoe7myVCmAIH8uhClv_-_QdHCN9277Vyi10zOvSAFT4Doc8Cb-ulv78ZJQ3-Btz_0OxbBPjiJVnhDfERrVFsd8KX1I1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://fcm.googleapis.com/fcm/send",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "f2da5e82-7f28-6461-73c1-ff234a4a5eac",
+			"data": [],
+			"dataMode": "raw",
+			"name": "notification",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497715660883,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"to\" : \"cub2xYDlSh8:APA91bEWGLXvq7p4tJq-t13TuaUM1Lixb9BWUqaUMaI03e5hHW3MTqajwHeKLJVeTtX662Fuv5LBsj_1oPQivYHOm_ZRlj4oO0CpcIbI8-JIbjuzDzm_bEIwDy33z7DDvtzm2rUPjI6M\",\n    \"notification\" : {\n      \"body\" : \"Lab2\",\n      \"title\" : \"Lab2-test\",\n      \"icon\" : \"myicon\"\n    }\n}"
+		}
+	]
+}

@@ -23,7 +23,7 @@
       </span>
       <nav class="mdl-navigation">
         <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
-        <router-link class="mdl-navigation__link" to="/post" @click.native="hideMenu">My routes</router-link>
+        <router-link class="mdl-navigation__link" to="/myroutes" @click.native="hideMenu">My routes</router-link>
         <router-link class="mdl-navigation__link" to="/post" @click.native="hideMenu">Routes nearby</router-link>
         <router-link class="mdl-navigation__link" to="/setting" @click.native="hideMenu">Setting</router-link>
       </nav>

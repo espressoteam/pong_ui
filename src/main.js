@@ -59,7 +59,9 @@ Vue.use(Mdl)
 new Vue({
   el: '#app',
   firebase: {
-    users: firebase.database.ref('users')
+    users: firebase.database.ref('users'),
+    routes: firebase.database.ref('routes'),
+    topRoutes: firebase.database.ref('routes').limitToFirst(30)
   },
   router,
   template: '<App/>',

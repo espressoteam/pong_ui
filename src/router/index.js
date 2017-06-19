@@ -5,6 +5,7 @@ import DetailView from '../components/DetailView'
 import PostView from '../components/PostView'
 import RouteEditorView from '../components/RouteEditorView'
 import SettingView from '../components/SettingView'
+import MyRoutesView from '../components/MyRoutesView'
 
 Vue.use(Router)
 export default new Router({
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/myroutes',
+      name: 'myroutes',
+      component: MyRoutesView
     },
     {
       path: '/detail/:id',

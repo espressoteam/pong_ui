@@ -9,20 +9,12 @@
     </div>
   </div>
   <div class="mdl-grid">
-    <h4 class="head1">From Users</h4>
-  </div>
-  <div class="mdl-grid">
-    <route-card 
-    class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone"
-    v-for="route in this.$root.topRoutes" v-if="route.category=='user'" :route="route" :key="route['.key']" @click="displayDetails(route['.key'])"></route-card>
-  </div>
-  <div class="mdl-grid">
     <h4 class="head1">Recommended</h4>
   </div>
   <div class="mdl-grid">
     <route-card 
     class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone"
-    v-for="route in this.$root.topRoutes" v-if="route.category=='recommended'" :route="route" :key="route['.key']" @click="displayDetails(route['.key'])"></route-card>
+    v-for="route in this.$root.recommendedRoutes" :route="route" :key="route['.key']" @click="displayDetails(route['.key'])"></route-card>
   </div>
   <div class="mdl-grid">
     <h4 class="head1">Popular</h4>
@@ -30,7 +22,15 @@
   <div class="mdl-grid">
     <route-card 
     class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone"
-    v-for="route in this.$root.topRoutes" v-if="route.category=='popular'" :route="route" :key="route['.key']" @click="displayDetails(route['.key'])"></route-card>
+    v-for="route in this.$root.popularRoutes" :route="route" :key="route['.key']" @click="displayDetails(route['.key'])"></route-card>
+  </div>
+  <div class="mdl-grid">
+    <h4 class="head1">Latest Routes</h4>
+  </div>
+  <div class="mdl-grid">
+    <route-card 
+    class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone"
+    v-for="route in this.$root.userRoutes" :route="route" :key="route['.key']" @click="displayDetails(route['.key'])"></route-card>
   </div>
 </div>
 </template>

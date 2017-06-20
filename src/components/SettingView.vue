@@ -24,6 +24,7 @@ export default {
   methods: {
     saveUserName() {
       this.$root.$firebaseRefs.users.child(window.localStorage.getItem('userId')).child('displayName').set(this.displayName)
+      this.$router.push('/')
       EventBus.$emit('notification-received', {notification: {body: 'User name saved successfully'}})
     }
   }

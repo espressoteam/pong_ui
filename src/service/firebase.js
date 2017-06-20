@@ -76,13 +76,18 @@ function updateUserToken() {
   var userId = window.localStorage.getItem('userId')
   var userToken = window.localStorage.getItem('userToken')
 
+  window.localStorage.removeItem('displayName')
+  if (userId) {
+    database.ref('users/' + userId).child('displayName').on('value', function (snapshot) {
+      if (snapshot.val()) {
+        window.localStorage.setItem('displayName', snapshot.val())
+      }
+    })
+  }
+
   if (userId && userToken) {
     console.log('Save token to database...')
-    var userRef = database.ref('users/' + userId)
-    userRef.child('token').set(userToken)
-    userRef.child('displayName').on('value', function (snapshot) {
-      window.localStorage.setItem('displayName', snapshot.val())
-    })
+    database.ref('users/' + userId).child('token').set(userToken)
   } else {
     console.log('Missing user ID or token. Cannot save token to database.')
   }

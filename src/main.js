@@ -6,6 +6,7 @@ import router from './router'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import Vuefire from 'vuefire'
 import firebase from './service/firebase'
+import { EventBus } from './event-bus.js'
 
 Vue.use(Vuefire)
 Vue.config.productionTip = false
@@ -55,13 +56,25 @@ Vue.use(Vuetify)
 import Mdl from 'material-design-lite'
 Vue.use(Mdl)
 
+router.beforeEach(function (to, from, next) {
+  var displayName = window.localStorage.getItem('displayName')
+  if ((!displayName || displayName === 'null') && to.name !== 'setting') {
+    next('setting')
+    EventBus.$emit('notification-received', {notification: {body: 'Please enter username first'}})
+  } else {
+    next()
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   firebase: {
     users: firebase.database.ref('users'),
     routes: firebase.database.ref('routes'),
-    topRoutes: firebase.database.ref('routes').limitToFirst(30)
+    recommendedRoutes: firebase.database.ref('routes').orderByChild('category').equalTo('recommended'),
+    popularRoutes: firebase.database.ref('routes').orderByChild('category').equalTo('popular'),
+    userRoutes: firebase.database.ref('routes').orderByChild('category').equalTo('user').limitToLast(20)
   },
   router,
   template: '<App/>',
